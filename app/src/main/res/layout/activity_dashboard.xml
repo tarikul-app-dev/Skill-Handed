@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_main_bg"
+    tools:context=".DashboardActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_dashboard_logo"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ENHANCE SKILL LAVEL "
+            android:textColor="@color/color_white"
+            android:textSize="16sp"
+            android:layout_marginTop="20dp"
+
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please select your country"
+            android:textColor="@color/color_white"
+            android:textSize="18sp"
+            android:layout_marginTop="05dp"
+            android:layout_marginLeft="10dp"
+            />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/white_green_border"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:gravity="center"
+            >
+            <AutoCompleteTextView
+                android:id="@+id/sp_select_country"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="05dp"
+                android:singleLine="true"
+                android:background="@null"
+                android:textSize="18sp"
+                android:focusable="false"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="20dp"
+                android:theme="@style/Autocomplete"
+                />
+
+            <ImageView
+                android:id="@+id/imgv_arr_down"
+                android:layout_width="15dp"
+                android:layout_height="20dp"
+                app:srcCompat="@drawable/ic_down_arrow"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_alignTop="@+id/sp_select_country"
+                android:layout_alignBottom="@+id/sp_select_country"
+
+                />
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/lin_next"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/red_border"
+            >
+
+          <ImageView
+              android:layout_width="40dp"
+              android:layout_height="40dp"
+              android:layout_marginRight="10dp"
+              android:src="@drawable/ic_arrow_right"
+              android:layout_alignParentRight="true"
+              android:layout_centerInParent="true"
+              />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="দক্ষ হয়ে বিদেশ যান "
+                    android:textColor="@color/color_white"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="05dp"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="দক্ষ হয়ে বিদেশ যান "
+                    android:textColor="@color/color_white"
+                    android:textSize="16sp"
+                    android:layout_alignParentRight="true"
+                    />
+
+
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/red_border"
+                android:gravity="center"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Eastern Resource management service ltd.RL No-1057"
+                    android:textSize="14sp"
+                    android:textColor="@color/color_white"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+</RelativeLayout>

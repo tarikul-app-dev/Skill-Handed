@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/ic_main_bg"
+    tools:context=".RegisterActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/toolbar_color"
+        android:theme="@style/ToolbarColoredBackArrow"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        app:title="Register"
+        app:titleTextColor="#fff" >
+
+    </androidx.appcompat.widget.Toolbar>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/app_bar"
+            android:layout_marginTop="06dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_camera"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <FrameLayout
+                        android:id="@+id/frame_layout_choose_pic"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/circle"
+
+                        >
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/imgv_pic"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="0dp"
+                            android:background="@drawable/ic_camera"
+
+                            />
+
+
+                    </FrameLayout>
+
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txv_full_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="@string/first_name"
+                            android:textColor="#989399"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:id="@+id/img_star"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/ic_star" />
+
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/edt_fullname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:backgroundTint="#147F75"
+                        android:textColor="#fff" />
+                </LinearLayout>
+                <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="vertical"-->
+                <!--&gt;-->
+                <!--<TextView-->
+                <!--android:id="@+id/txv_l_name"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/last_name"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:textColor="#989399"-->
+                <!--android:textSize="20sp"-->
+                <!--/>-->
+
+                <!--<EditText-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:backgroundTint="#147F75"-->
+                <!--/>-->
+                <!--</LinearLayout>-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txv_mob_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/mobile_no"
+                        android:textColor="#989399"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/edt_mobile_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:backgroundTint="#147F75"
+                        android:inputType="number"
+                        android:textColor="#fff" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txv_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/address"
+                        android:textColor="#989399"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/edt_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:backgroundTint="#147F75"
+                        android:textColor="#fff" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txv_birth_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/birthday"
+                        android:textColor="#989399"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/edt_birth_day"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:backgroundTint="#147F75"
+                        android:hint="01-01-1970"
+                        android:textColor="#fff"
+                        android:textColorHint="#9A959B" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <RadioGroup
+                        android:id="@+id/rg_gender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txv_gender"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="@string/gender"
+                            android:textColor="#989399"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/rbtn_male"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:checked="true"
+                            android:text="@string/male"
+                            android:textColor="#fff" />
+
+                        <RadioButton
+                            android:id="@+id/rbtn_female"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:text="@string/female"
+                            android:textColor="#fff" />
+
+
+                    </RadioGroup>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txv_guard_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/guardian_s_name"
+                        android:textColor="#989399"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/edt_guard_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:backgroundTint="#147F75"
+                        android:textColor="#fff"
+
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txv_fath_ph_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/father_s_phone_number"
+                        android:textColor="#989399"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/edt_guard_ph_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:backgroundTint="#147F75"
+                        android:inputType="number"
+                        android:textColor="#fff" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <RadioGroup
+                        android:id="@+id/rg_passport"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txv_have_pass"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="@string/have_passport"
+                            android:textColor="#989399"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/rbtn_p_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:text="@string/yes"
+                            android:textColor="#fff"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/rbtn_p_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:checked="true"
+                            android:text="@string/no"
+                            android:textColor="#fff"
+                            android:textSize="20sp" />
+
+
+                    </RadioGroup>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/have_passport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txv_pass_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="@string/passport_number"
+                            android:textColor="#989399"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:id="@+id/edt_passport_no"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:backgroundTint="#147F75"
+                            android:textColor="#fff" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txv_pass_ex_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="@string/passport_expiry_date"
+                            android:textColor="#989399"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:id="@+id/edt_pass_exp_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:backgroundTint="#147F75"
+                            android:textColor="#fff" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txv_pass_image"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="@string/passport_image"
+                            android:textColor="#989399"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:id="@+id/imgv_passport"
+                            android:layout_width="100dp"
+                            android:layout_height="60dp"
+                            android:layout_marginLeft="10dp"
+                            android:backgroundTint="#fff"
+                            android:src="@drawable/ic_pass_image" />
+
+                    </LinearLayout>
+                </LinearLayout>
+                <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="vertical"-->
+                <!--&gt;-->
+                <!--<TextView-->
+                <!--android:id="@+id/txv_agent_name"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="@string/agents_name"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:textColor="#989399"-->
+                <!--android:textSize="20sp"-->
+                <!--/>-->
+
+                <!--<EditText-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:backgroundTint="#147F75"-->
+
+
+                <!--/>-->
+                <!--</LinearLayout>-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txv_training_sch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/training_school"
+                        android:textColor="#989399"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/edt_training_school"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:backgroundTint="#147F75"
+                        android:textColor="#fff"
+
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txv_skills"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="@string/skills"
+                        android:textColor="#989399"
+                        android:textSize="20sp"
+
+                        />
+                    <!--<android.support.v7.widget.CardView-->
+                    <!--android:id="@+id/yourcardid"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="40dp"-->
+                    <!--android:elevation="1dp"-->
+                    <!--app:cardCornerRadius="0dp"-->
+                    <!--android:innerRadius="0dp"-->
+                    <!--android:shape="rectangle"-->
+
+                    <!--app:cardBackgroundColor="#989399"-->
+                    <!--android:thicknessRatio="1.9"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:layout_marginRight="15dp"-->
+                    <!--&gt;-->
+                    <Spinner
+                        android:id="@+id/sp_skill"
+                        style="@style/style_Spinner"
+                        android:layout_width="match_parent"
+                        android:entries="@array/spinner_skill"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="03dp"
+                        android:layout_marginRight="10dp" />
+                    <!--</android.support.v7.widget.CardView>-->
+                    <EditText
+                        android:id="@+id/edtOthers"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:backgroundTint="#147F75"
+                        android:hint="@string/enter_here"
+                        android:textColor="#fff"
+                        android:textColorHint="#fff"
+                        android:textSize="16sp"
+                        android:visibility="gone"
+
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+
+                    <RadioGroup
+                        android:id="@+id/rg_oversease"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txv_ovs_exp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="0dp"
+                            android:text="@string/ovs_exp"
+                            android:textColor="#989399"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/rbtn_ovs_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:text="@string/yes"
+                            android:textColor="#fff"
+                            android:textSize="20sp" />
+
+                        <RadioButton
+                            android:id="@+id/rbtn_ovs_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="1"
+                            android:checked="true"
+                            android:text="@string/no"
+                            android:textColor="#fff"
+                            android:textSize="20sp" />
+
+
+                    </RadioGroup>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lin_oversease_yes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txv_overs_trade"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Trade:"
+                            android:textColor="#989399"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:id="@+id/edt_trade"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="25dp"
+                            android:backgroundTint="#147F75"
+                            android:textColor="#fff" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txv_overs_duration"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Duration:"
+                            android:textColor="#989399"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:id="@+id/edt_duration"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="05dp"
+                            android:backgroundTint="#147F75"
+                            android:textColor="#fff" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txv_overs_country"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Country:"
+                            android:textColor="#989399"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:id="@+id/edt_country"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:backgroundTint="#147F75"
+                            android:textColor="#fff" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txv_overs_company"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Company:"
+                            android:textColor="#989399"
+                            android:textSize="20sp" />
+
+                        <EditText
+                            android:id="@+id/edt_company"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="0dp"
+                            android:backgroundTint="#147F75"
+                            android:textColor="#fff" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lin_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/round_shape"
+                    android:gravity="center"
+                    android:layout_marginBottom="10dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Submit"
+                        android:textSize="30sp"
+                        android:layout_gravity="center"
+                        android:textColor="@color/color_white"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

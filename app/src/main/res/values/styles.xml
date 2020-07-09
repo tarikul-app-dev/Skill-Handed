@@ -1,0 +1,29 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/toolbar_color</item>
+        <item name="colorPrimaryDark">@color/toolbar_color</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="ToolbarColoredBackArrow" parent="AppTheme">
+        <item name="android:textColorSecondary">@android:color/white</item>
+    </style>
+
+
+    <style name="Autocomplete">
+        <item name="colorControlNormal">@color/round_border</item>
+        <item name="colorControlActivated">@color/black</item>
+    </style>
+
+    <style name="style_Spinner">
+        <item name="android:background">@drawable/ic_dropdown</item>
+        <item name="android:dropDownSelector">@color/colorPrimary</item>
+        <item name="android:popupBackground">#fff</item>
+        <item name="android:spinnerMode">dropdown</item>
+
+    </style>
+
+</resources>
