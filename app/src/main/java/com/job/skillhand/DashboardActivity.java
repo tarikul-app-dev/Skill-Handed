@@ -20,6 +20,7 @@ public class DashboardActivity extends AppCompatActivity {
     RelativeLayout lin_next;
     String[] countryList ;
     ImageView imgvArr;
+    ImageView imgvContactUs;
     boolean isSelect = false;
     Util util;
     String country_name = " ";
@@ -35,6 +36,7 @@ public class DashboardActivity extends AppCompatActivity {
         atvCountrySelection = findViewById(R.id.sp_select_country);
         lin_next = findViewById(R.id.lin_next);
         imgvArr = findViewById(R.id.imgv_arr_down);
+        imgvContactUs = findViewById(R.id.imgv_contact_us);
         countryList = getResources().getStringArray(R.array.country_name);
         atvCountrySelection.setAdapter(new ArrayAdapter<String>(DashboardActivity.this,R.layout.dropdown_item,
                 R.id.text1, countryList));
@@ -71,5 +73,13 @@ public class DashboardActivity extends AppCompatActivity {
             }
         });
 
+
+        imgvContactUs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(DashboardActivity.this,ContactUsActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

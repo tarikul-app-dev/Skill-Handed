@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/ic_main_bg"
+    tools:context=".ContactUsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_contact_us_head"
+            />
+        
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="HotLine No: 01955 055355"
+           android:textColor="@color/color_white"
+           android:layout_marginTop="20dp"
+           android:textSize="16sp"
+           />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Md.Abdul Monsur Ahmed"
+            android:textColor="@color/color_white"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Managing Director"
+            android:textColor="@color/color_white"
+            android:textSize="16sp"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="017748888888"
+            android:textColor="@color/color_white"
+            android:textSize="16sp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="softbrandsytem15@gmail.com"
+            android:textColor="@color/color_white"
+            android:textSize="16sp"
+            />
+    </LinearLayout>
+
+ <RelativeLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_marginTop="10dp"
+     >
+     <LinearLayout
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:orientation="vertical"
+         android:layout_marginTop="10dp"
+         android:layout_marginLeft="05dp"
+         >
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Md.Abdul "
+             android:textColor="@color/color_white"
+             android:textSize="16sp"
+             />
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Managing Director"
+             android:textColor="@color/color_white"
+             android:textSize="16sp"
+             android:layout_marginTop="10dp"
+             />
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="017748888888"
+             android:textColor="@color/color_white"
+             android:textSize="16sp"
+             />
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="softbrand@gmail.com"
+             android:textColor="@color/color_white"
+             android:textSize="16sp"
+             />
+     </LinearLayout>
+     <LinearLayout
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:orientation="vertical"
+         android:layout_marginTop="10dp"
+        android:layout_alignParentRight="true"
+         >
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Md.Abdul "
+             android:textColor="@color/color_white"
+             android:textSize="16sp"
+             />
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="Managing Director"
+             android:textColor="@color/color_white"
+             android:textSize="16sp"
+             android:layout_marginTop="10dp"
+             />
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="017748888888"
+             android:textColor="@color/color_white"
+             android:textSize="16sp"
+             />
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="softbrand@gmail.com"
+             android:textColor="@color/color_white"
+             android:textSize="16sp"
+             />
+     </LinearLayout>
+ </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        >
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/ic_google_icon"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -13,7 +13,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:layout_below="@+id/toolbar"
         android:layout_marginTop="20dp"
         android:orientation="vertical"
         >
@@ -21,20 +20,29 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:src="@drawable/ic_dashboard_logo"
+            android:src="@drawable/icon_logo"
             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ENHANCE SKILL LAVEL "
+            android:text="SKILL HANDED"
             android:textColor="@color/color_white"
             android:textSize="16sp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="0dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ENHANCE SKILL LAVEL"
+            android:textColor="@color/color_white"
+            android:textSize="16sp"
+            android:layout_marginTop="05dp"
 
             />
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/lin_sl_country"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -43,7 +51,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Please select your country"
+            android:text="Please Select Your Country"
             android:textColor="@color/color_white"
             android:textSize="18sp"
             android:layout_marginTop="05dp"
@@ -51,7 +59,7 @@
             />
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="38dp"
             android:background="@drawable/white_green_border"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="0dp"
@@ -69,6 +77,7 @@
                 android:focusable="false"
                 android:layout_centerInParent="true"
                 android:layout_marginRight="20dp"
+                android:textColor="#000"
                 android:theme="@style/Autocomplete"
                 />
 
@@ -89,10 +98,18 @@
         <RelativeLayout
             android:id="@+id/lin_next"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginTop="20dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/red_border"
             >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Next"
+                android:layout_centerInParent="true"
+                android:textSize="16sp"
+                android:textColor="@color/color_white"
+                />
 
           <ImageView
               android:layout_width="40dp"
@@ -108,10 +125,38 @@
 
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/lin_sl_country"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:id="@+id/imgv_contact_us"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_contact_us"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_our_services"
+            android:layout_marginTop="05dp"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="05dp"
+            android:background="@drawable/ic_events"
+            />
 
 
 
-
+    </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -147,7 +192,7 @@
             </RelativeLayout>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="38dp"
                 android:background="@drawable/red_border"
                 android:gravity="center"
                 >

@@ -23,6 +23,7 @@ import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -41,6 +42,7 @@ import java.util.List;
 import java.util.Locale;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.FileProvider;
@@ -52,6 +54,11 @@ public class RegisterActivity extends AppCompatActivity {
             edtGuardPhone,edtTrainSch,edtOverTrade,edtOverDur,edtOverCountry,
             edtOverCompany;
     RadioGroup rgGender,rgHavePassport,rgOverExp;
+    RadioButton rbtnPassYes;
+    RadioButton rbtnPassNo;
+    RadioButton rbtnOvsExpYes;
+    RadioButton rbtnOvsExpNo;
+    LinearLayout linHavePassport,linOverExper;
     Spinner spSkill;
     LinearLayout linBtnSubmit;
     CircleImageView imgvShowPic;
@@ -69,11 +76,22 @@ public class RegisterActivity extends AppCompatActivity {
     String picName = " ";
     File takePicImageFile;
     ImageCompressor imageCompressor;
+    Toolbar toolbar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+        toolbar = (Toolbar)findViewById(R.id.toolbar_reg) ;
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
         initViews();
     }
 
@@ -96,11 +114,48 @@ public class RegisterActivity extends AppCompatActivity {
         rgOverExp = findViewById(R.id.rg_oversease);
         linBtnSubmit = findViewById(R.id.lin_submit);
         imgvShowPic = findViewById(R.id.imgv_pic);
+        rbtnPassYes = findViewById(R.id.rbtn_p_yes);
+        rbtnPassNo = findViewById(R.id.rbtn_p_no);
+        rbtnOvsExpYes = findViewById(R.id.rbtn_ovs_yes);
+        rbtnOvsExpNo = findViewById(R.id.rbtn_ovs_no);
+        linHavePassport = findViewById(R.id.lin_have_passport);
+        linOverExper = findViewById(R.id.lin_oversease_yes);
         imageCompressor = new ImageCompressor();
+
+        rbtnPassYes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                linHavePassport.setVisibility(View.VISIBLE);
+            }
+        });
+
+        rbtnPassNo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                linHavePassport.setVisibility(View.GONE);
+            }
+        });
+
+        rbtnOvsExpYes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                linOverExper.setVisibility(View.VISIBLE);
+            }
+        });
+
+        rbtnOvsExpNo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                linOverExper.setVisibility(View.GONE);
+            }
+        });
 
         linBtnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                      Intent intent = new Intent(RegisterActivity.this,ViewPageActivity.class);
+                    startActivity(intent);
+                    ActivityCompat.finishAffinity(RegisterActivity.this);
 
             }
         });
